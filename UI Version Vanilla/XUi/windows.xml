@@ -396,7 +396,7 @@
 					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="calipers" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
 				</rect>
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="Blank_Mold" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
 				</rect>
 			</grid>
 		</panel>
@@ -482,7 +482,7 @@
 			
 			<grid name="slot_preview" depth="1" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="Geometry_Set" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
 				</rect>
 			</grid>
 		</panel>
@@ -501,7 +501,7 @@
 			
 			<grid name="slot_preview" depth="1" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="smallEngine" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="Sewing_Machine" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
 				</rect>
 			</grid>
 		</panel>
@@ -514,13 +514,16 @@
 		</panel>
 		
 		<panel name="content" depth="0" pos="0,-46" backgroundcolor="[black]">
-			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true">
+			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true">
 				<item_stack name="0"/>
 			</grid>		
 			
-			<grid name="slot_preview" depth="1" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+			<grid name="slot_preview" depth="1" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
 					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="anvil" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="Blank_Mold" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
 				</rect>
 			</grid>
 		</panel>
@@ -539,10 +542,10 @@
 			
 			<grid name="slot_preview" depth="1" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="calipers" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
 				</rect>
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="bowl" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="Mortar_and_Pestal" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
 				</rect>
 			</grid>
 		</panel>
