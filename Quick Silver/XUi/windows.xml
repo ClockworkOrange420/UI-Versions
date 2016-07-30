@@ -26,7 +26,7 @@
 			<sprite depth="6" name="Food" controller="HUDStatBar" stat_type="Food" visible="{StatVisible}" size="80,80" pos="98,-6" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,255,0" filldirection="radial360"/>
 			<sprite depth="6" name="Water" controller="HUDStatBar" stat_type="Water" visible="{StatVisible}" size="80,80" pos="2,-7" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,0,203" filldirection="radial360"/>
 			
-			<texture depth="7" name="Biotop" size="420,420" texture="@http://i68.tinypic.com/246ndc6.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
+			<texture depth="7" name="Biotop" size="420,420" texture="@http://i65.tinypic.com/2yudstl.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
 			
 			<label depth="11" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="-105,-75" font_size="20" color="[black]" justify="center" pivot="center" text="{PlayerCoreTemp}"/>
 			
