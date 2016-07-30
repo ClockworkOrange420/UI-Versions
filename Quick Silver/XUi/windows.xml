@@ -1,5 +1,5 @@
 <windows>
-	<window name="HUDLeftStatBars">
+	<window name="HUDLeftStatBars" depth="2">
 		<rect name="hud" pos="93,20" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
 			<panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
 				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="43" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
@@ -9,36 +9,47 @@
 		</rect>
 	</window>
 	
-	<window name="ClockworkWatch" pos="-650,-400" anchor="CenterCenter">
+	<window name="ClockworkBiosilver" depth="1" pos="-650,-400" anchor="CenterCenter">
 	<panel backgroundcolor="[black]">
 			
-			<texture depth="1" name="WatchBottom03" size="240,240" texture="@http://i68.tinypic.com/317a4gn.png" material="Materials/Transparent Colored" pos="-10,0" justify="center" pivot="center"/>
+			<texture depth="1" name="Biobottom" size="420,420" texture="@http://i63.tinypic.com/25yx635.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
 			
-			<sprite depth="2" name="Health" controller="HUDStatBar" stat_type="Health" visible="{StatVisible}" size="200,200" pos="-10,0" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="255,0,0" filldirection="radial360"/>
+			<sprite depth="2" name="Health" controller="HUDStatBar" stat_type="Health" visible="{StatVisible}" size="266,266" pos="50,21" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="255,0,0" filldirection="radial360"/>
 			
-			<texture depth="3" name="WatchMiddle" size="240,240" texture="@http://i65.tinypic.com/xcpv20.png" material="Materials/Transparent Colored" pos="-10,0" justify="center" pivot="center"/>
+			<texture depth="3" name="Biomiddle" size="420,420" texture="@http://i63.tinypic.com/2r7ahc1.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
 			
-			<sprite depth="4" name="Stamina" controller="HUDStatBar" stat_type="Stamina" visible="{StatVisible}" size="175,175" pos="-10,0" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" color="0,0,255" fill="{StatFill}" filldirection="radial360" flip="Vertically"/>
+			<sprite depth="4" name="Stamina" controller="HUDStatBar" stat_type="Stamina" visible="{StatVisible}" size="237,237" pos="50,21" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" color="0,0,255" fill="{StatFill}" filldirection="radial360" flip="Vertically"/>
 			
-			<texture depth="5" name="WatchMiddle02" size="240,240" texture="@http://i64.tinypic.com/xmqx4w.png" material="Materials/Transparent Colored" pos="-8,-3" justify="center" pivot="center"/>
+			<texture depth="5" name="Biomiddle02" size="420,420" texture="@http://i67.tinypic.com/2aev5aa.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
 			
-			<sprite depth="6" name="PlayerLevel" controller="PlayerStatsWindow" visible="{StatVisible}" size="51,51" pos="-47,-1" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{PlayerLevelFill}" color="255,255,0" filldirection="radial360"/>
-			<sprite depth="6" name="Food" controller="HUDStatBar" stat_type="Food" visible="{StatVisible}" size="52,52" pos="28,-2" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,255,0" filldirection="radial360"/>
+			<sprite depth="6" name="PlayerLevel" controller="PlayerStatsWindow" visible="{StatVisible}" size="80,80" pos="50,77" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{PlayerLevelFill}" color="255,255,0" filldirection="radial360"/>
+			<sprite depth="6" name="Food" controller="HUDStatBar" stat_type="Food" visible="{StatVisible}" size="80,80" pos="98,-6" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,255,0" filldirection="radial360"/>
+			<sprite depth="6" name="Water" controller="HUDStatBar" stat_type="Water" visible="{StatVisible}" size="80,80" pos="2,-7" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,0,203" filldirection="radial360"/>
 			
-			<sprite depth="6" name="Water" controller="HUDStatBar" stat_type="Water" visible="{StatVisible}" size="47,47" pos="-11,-40" sprite="ui_game_filled_circle" justify="center" pivot="center" type="filled" fill="{StatFill}" color="0,0,255" filldirection="radial360"/>
+			<texture depth="7" name="Biotop" size="420,420" texture="@http://i68.tinypic.com/246ndc6.png" material="Materials/Transparent Colored" pos="50,20" justify="center" pivot="center"/>
 			
-			<texture depth="7" name="WatchTop03" size="240,240" texture="@http://i63.tinypic.com/33adyys.png" material="Materials/Transparent Colored" pos="1,-8" justify="center" pivot="center"/>
+			<label depth="11" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="-105,-75" font_size="20" color="[black]" justify="center" pivot="center" text="{PlayerCoreTemp}"/>
 			
-			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="-56,-40" font_size="20" color="[beige]" justify="center" pivot="center" text="{PlayerCoreTemp}"/>
-			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="-11,-47" font_size="16" color="[beige]" justify="center" pivot="center" text="{PlayerWater} %"/>
+			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="49,82" font_size="24" color="[beige]" justify="center" pivot="center" text="{PlayerLevel}"/>
+			
+			<label depth="8" name="dayTimeLabel" controller="MapStats" size="240,240" pos="49,-65" text=" [DECEA3]{MapDayTime}[-]" font_size="22" justify="center" pivot="center"/>
+			
+			<label depth="11" name="elevLabel" controller="MapStats" size="240,240" pos="195,-75" text=" [DECEA3]{MapElevation} M[-]" color="[black]" font_size="20" justify="center" pivot="center"/>
+			<!--
+			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="0,-37" font_size="24" color="255,188,0" justify="center" pivot="center" text="{PlayerWater} %"/>
+			
 			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="28,-9" font_size="16" color="[beige]" justify="center" pivot="center" text="{PlayerFood} %"/>
-			<label depth="8" name="TextContent" controller="PlayerStatsWindow" size="240,240" pos="-48,-11" font_size="16" color="[beige]" justify="center" pivot="center" text="{PlayerLevel}"/>
-			<label depth="8" name="dayTimeLabel" controller="MapStats" size="240,240" pos="-16,35" text=" [DECEA3]{MapDayTime}[-]" font_size="22" justify="center" pivot="center"/>
-			<label depth="8" name="elevLabel" controller="MapStats" size="240,240" pos="30,-40" text=" [DECEA3]{MapElevation} M[-]" font_size="20" justify="center" pivot="center"/>
+			-->
+			<texture depth="10" name="ToolBelt" size="1500,350" pos="-84,93" texture="@http://i63.tinypic.com/2v0oda8.png" material="Materials/Transparent Colored" justify="center"/>
+			<texture depth="10" name="TempButton" size="100,100" pos="-155,-25" texture="@http://i64.tinypic.com/110lyfs.png" material="Materials/Transparent Colored" justify="center"/>
+			<texture depth="10" name="AltitudeButton" size="100,100" pos="150,-25" texture="@http://i64.tinypic.com/110lyfs.png" material="Materials/Transparent Colored" justify="center"/>
+			<texture depth="1" name="LeftSide" size="300,300" pos="-350,100" texture="@http://i65.tinypic.com/2zqa686.png" material="Materials/Transparent Colored" justify="center"/>
+			<texture depth="1" name="RightSide" size="300,300" pos="1350,100" texture="@http://i66.tinypic.com/2ah8lj6.png" material="Materials/Transparent Colored" justify="center"/>
+			<texture depth="1" name="TopBanner" size="1200,650" pos="65,1275" texture="@http://i64.tinypic.com/3585477.png" material="Materials/Transparent Colored" justify="center"/>
 	</panel>
 	</window>
 	
-	<window name="windowToolbeltNumbersHUD" depth="10" width="603" height="22" pos="-313,100" anchor="CenterBottom">		
+	<window name="windowToolbeltNumbersHUD" depth="10" width="603" height="22" pos="-300,100" anchor="CenterBottom">		
 		<label name="slot1" pos="22,0" width="22" height="22" text="  [DECEA3]1" font_size="20" justify="center"/>
 		<label name="slot2" pos="97,0" width="22" height="22" text="  [DECEA3]2" font_size="20" justify="center"/>
 		<label name="slot3" pos="172,0" width="22" height="22" text="  [DECEA3]3" font_size="20" justify="center"/>
@@ -49,7 +60,7 @@
 		<label name="slot8" pos="547,0" width="22" height="22" text="  [DECEA3]8" font_size="20" justify="center"/>
 	</window>
 	
-	<window name="HUDRightStatBars">
+	<window name="HUDRightStatBars" depth="2">
 	
 		<rect name="hud" pos="-90,31" side="right" controller="CollectedItemList" pivot="BottomLeft">
 			<panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
@@ -123,7 +134,7 @@
 		<label style="nonpaging.window.name"/>
 	</window>
 	
-	<window name="windowCompass" style="compass.window" controller="CompassWindow">
+	<window name="windowCompass" depth="2" style="compass.window" controller="CompassWindow">
 		<sprite style="compass.window.background.border"/>
 		<sprite style="compass.window.background"/>
 		
@@ -557,12 +568,12 @@
 		</rect>
 	</window>
 	
-	<window name="windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 87" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{ToolbeltVisible}">
+	<window name="windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-303, 87" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{ToolbeltVisible}">
 		
 		<rect>
-			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />	
-			<grid depth="2" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
-				<item_stack name="0"/>
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[transparent]" type="sliced" fillcenter="false" on_press="true" />	
+			<grid depth="1" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
+				<toolbelt_stack name="0"/>
 			</grid>
 		</rect>
 	</window>
