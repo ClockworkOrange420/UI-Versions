@@ -3,7 +3,7 @@
 
 	<window name="HUDLeftStatBars">
 
-			<panel name="ClockworkDiablo" backgroundcolor="[transparent]">
+			<panel name="ClockworkDiablo" backgroundcolor="[transparent]" controller="HUDStatBar">
 			
 				<sprite depth="3" pos="1262,95" size="230,160" controller="HUDStatBar" stat_type="Food" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="GreenSemiCircle" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="1" color="10,41,10" filldirection="Vertical"/>
 				
