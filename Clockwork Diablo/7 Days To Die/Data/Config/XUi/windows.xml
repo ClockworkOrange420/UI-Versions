@@ -125,9 +125,19 @@
 		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0" >
 
 		</texture>
-		<sprite pos="200,-60" sprite="" color="255,255,255,255" globalopacitymod="1.8">
-			<label depth="2" width="300" height="30" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" pivot="center" effect="outline" upper_case="true" justify="center"/>
-		</sprite>
+		<!--Modded
+		<sprite depth="4" pos="60,-50" name="windowIcon" size="20,20" sprite="ui_game_symbol_clock" color="255,255,255,255" globalopacitymod="1.8"/>-->
+		<label depth="4" pos="150,-60" name="TextContent" size="300,30" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="247,-50" name="tempIcon" size="20,20" sprite="ui_game_symbol_temperature" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="307,-60" name="TextContent" size="300,30" controller="PlayerStatsWindow" text="{playercoretemp}" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="360,-15" name="elevIcon" size="20,20" sprite="ui_game_symbol_climb" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="420,-25" size="300,30" name="elevLabel" controller="MapStats" text="{mapelevation} M[-]" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="22,-15" name="windIcon" size="20,20" sprite="ui_game_symbol_wind" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="-18,-25" name="windLabel" size="300,30" controller="MapStats" text="{mapwind} MPH[-]" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		<!--End Modded-->
 	</window>
 
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
@@ -429,51 +439,46 @@
 				</grid>
 		</panel>
 	</window>
-
-	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
+	<!--Modded-->
 	<window name="windowToolsForge" width="228" height="121" panel="Right" cursor_area="true" >
-	<!--#$-IGS END.-$#-->
-		<panel style="header.panel">
+		<panel style="header.panel">			
 			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
 			<label style="header.name" text="TOOLS" text_key="xuiTools" />
 		</panel>
-
+		
 		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false"
-			required_tools="anvil,forgeCrucible,toolAndDieSet" required_tools_only="true">
+			
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false">
 				<required_item_stack name="0"/>
-			</grid>
-
-			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+			</grid>		
+			
+			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
 					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="anvil" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
 				</rect>
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="forgeCrucible" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="calipers" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
 				</rect>
 				<rect>
-					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="Blank_Mold" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
 				</rect>
-			</grid> -->
+			</grid>
 		</rect>
-
+		
 	</window>
-
-	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
+	
 	<window name="windowToolsCampfire" width="228" height="121" panel="Right" cursor_area="true" >
-	<!--#$-IGS END.-$#-->
-		<panel style="header.panel">
+		<panel style="header.panel">			
 			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
 			<label style="header.name" text="TOOLS" text_key="xuiTools" />
 		</panel>
-
+		
 		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill,beaker" required_tools_only="true">
+			
+			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill" required_tools_only="true">
 				<required_item_stack name="0"/>
-			</grid>
-
+			</grid>		
+			
 			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
 					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingPot" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
@@ -487,7 +492,194 @@
 			</grid> -->
 		</rect>
 	</window>
-
+	
+	<window name="windowToolsStoveOven" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill,beaker" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingPot" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingGrill" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="beaker" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid> -->
+		</rect>
+	</window>
+	
+	<window name="windowToolsOmnigelStation" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="beaker" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingPot" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingGrill" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="beaker" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid> -->
+		</rect>
+	</window>
+	
+	<window name="windowToolsResearchTable" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_pen"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="Geometry_Set" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingPot" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingGrill" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="beaker" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid> -->
+		</rect>
+	</window>
+	
+	<window name="windowToolsTailoringTable" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_tailoring"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="Sewing_Machine" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingPot" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cookingGrill" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="beaker" atlas="ItemIconAtlasGreyscale"  pos="35,-30" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid> -->
+		</rect>
+	</window>
+	
+	<window name="windowToolsSmithingTable" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_sledge"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="anvil" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="wrench" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="Blank_Mold" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+			</grid>
+		</rect>
+		
+	</window>
+	
+	<window name="windowToolsAmmunitionTable" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false"
+			required_tools="toolAndDieSet,Mortar_and_Pestle" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="anvil" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="calipers" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+			</grid> -->
+		</rect>
+		
+	</window>
+	
+	<window name="windowToolsworkbench" width="228" height="121" panel="Right" cursor_area="true" >
+		<panel style="header.panel">			
+			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false"
+			required_tools="clawHammer,Trowel,wrench" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+			
+			<!-- <grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="anvil" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="calipers" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" foregroundlayer="true" color="[white_quarter_alpha]" sprite="toolAndDieSet" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center"/>
+				</rect>
+			</grid> -->
+		</rect>
+		
+	</window>
+	<!--Modded End-->
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowFuel" width="228" height="166" panel="Right" cursor_area="true">
 	<!--#$-IGS END.-$#-->
@@ -794,9 +986,11 @@
 					<button depth="4" name="pageUp" style="icon30px, press" pos="84,-22" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]" />
 				</panel>
 			</rect>
-			<grid name="buffs" rows="6" cols="1" pos="3,-43" cell_width="314" cell_height="45" repeat_content="true" controller="ActiveBuffList">
+			<!--Modded-->
+			<grid name="buffs" rows="12" cols="2" pos="3,-43" cell_width="161" cell_height="30" repeat_content="true" controller="ActiveBuffList">
 				<active_buff_entry />
 			</grid>
+			<!--End Modded-->
 		</panel>
 	</window>
 
@@ -2582,7 +2776,7 @@
 				<togglebutton name="toggleDecorations" caption_key="xuiDebugMenuDecorations" width="290" height="32" depth="3" />
 				<togglebutton name="toggleEntityTasks" caption_key="xuiDebugMenuEntityTasks" width="290" height="32" depth="3" />
 				<togglebutton name="toggleLightPerformance" caption_key="xuiDebugMenuShowLightPerf" width="290" height="32" depth="3" />
-        <togglebutton name="toggleStabilityGlue" caption_key="xuiDebugMenuShowStabilityGlue" width="290" height="32" depth="3" />
+				<togglebutton name="toggleStabilityGlue" caption_key="xuiDebugMenuShowStabilityGlue" width="290" height="32" depth="3" />
 			</grid>
 
 		</panel>
