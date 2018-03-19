@@ -5,18 +5,18 @@
 
 			<panel name="ClockworkDiablo" backgroundcolor="[transparent]" controller="HUDStatBar">
 			
-				<sprite depth="3" pos="1262,95" size="230,160" controller="HUDStatBar" stat_type="Food" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="GreenSemiCircle" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="1" color="10,41,10" filldirection="Vertical"/>
+				<sprite depth="3" pos="1262,92" size="230,156" controller="HUDStatBar" stat_type="Food" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="GreenSemiCircle" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="1" color="10,41,10" filldirection="Vertical"/>
 				
-				<sprite depth="3" pos="1335,95" size="230,160" controller="HUDStatBar" stat_type="Water" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="BlueSemiCircle" foregroundlayer="true" justify="center" pivot="center" flip="Horizontally" type="filled" fill="1" color="13,13,55" filldirection="Vertical"/>
+				<sprite depth="3" pos="1335,92" size="230,156" controller="HUDStatBar" stat_type="Water" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="BlueSemiCircle" foregroundlayer="true" justify="center" pivot="center" flip="Horizontally" type="filled" fill="1" color="13,13,55" filldirection="Vertical"/>
 				
-				<sprite depth="3" pos="913,94" size="640,10" controller="PlayerStatsWindow" name="PlayerLevel"  visible="{statvisible}" atlas="ItemIconAtlas" sprite="ui_game_symbol_gold" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="{playerlevelfill}" color="255,215,0" filldirection="Horizontal"/>
+				<sprite depth="3" pos="913,90" size="640,10" controller="PlayerStatsWindow" name="PlayerLevel"  visible="{statvisible}" atlas="ItemIconAtlas" sprite="ui_game_symbol_gold" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="{playerlevelfill}" color="255,215,0" filldirection="Horizontal"/>
 				
-				<sprite depth="3" pos="554,95" size="230,160" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="TealSemiCircle" foregroundlayer="true" justify="center" pivot="center" flip="Horizontally" type="filled" fill="1" color="0,119,134" filldirection="Vertical"/>
+				<sprite depth="3" pos="554,92" size="230,156" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="TealSemiCircle" foregroundlayer="true" justify="center" pivot="center" flip="Horizontally" type="filled" fill="1" color="0,119,134" filldirection="Vertical"/>
 				
-				<sprite depth="3" pos="482,95" size="230,160" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="RedSemiCircle" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="1"  filldirection="Vertical"/>
+				<sprite depth="3" pos="482,92" size="230,156" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="RedSemiCircle" foregroundlayer="true" justify="center" pivot="center" type="filled" fill="1"  filldirection="Vertical"/>
 				
-				<texture depth="5" pos="910,90" name="diabloBar" size="1180,180" texture="@file:Mods\ACPIcons\UI\beltBar.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
-				<texture depth="2" pos="910,90" name="diabloBar" size="1180,180" texture="@file:Mods\ACPIcons\UI\BackPanel.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
+				<texture depth="5" pos="910,87" name="diabloBarF" size="1200,198" texture="@file:Mods\ACPIcons\UI\beltBar.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
+				<texture depth="2" pos="910,87" name="diabloBarB" size="1200,198" texture="@file:Mods\ACPIcons\UI\BackPanel.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
 				
 			</panel>
 		
