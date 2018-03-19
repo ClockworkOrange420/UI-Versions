@@ -1,4 +1,6 @@
 <windows>
+<!--Modded-->
+
 	<window name="HUDLeftStatBars">
 
 			<panel name="ClockworkSymbols" backgroundcolor="[transparent]" controller="HUDStatBar">
@@ -46,6 +48,8 @@
 		<label name="slot7" pos="472,0" width="22" height="22" text="  [DECEA3]7" font_size="20" justify="center"/>
 		<label name="slot8" pos="547,0" width="22" height="22" text="  [DECEA3]8" font_size="20" justify="center"/>
 	</window>
+	
+	<!--End Modded-->
 
 	<window name="HUDRightStatBars">
 
@@ -142,9 +146,18 @@
 
 		</texture>
 		<!--Modded
-		<sprite pos="200,-60" sprite="" color="255,255,255,255" globalopacitymod="1.8">
-			<label depth="2" width="300" height="30" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" pivot="center" effect="outline" upper_case="true" justify="center"/>
-		</sprite>-->
+		<sprite depth="4" pos="60,-50" name="windowIcon" size="20,20" sprite="ui_game_symbol_clock" color="255,255,255,255" globalopacitymod="1.8"/>-->
+		<label depth="4" pos="150,-60" name="TextContent" size="300,30" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="247,-50" name="tempIcon" size="20,20" sprite="ui_game_symbol_temperature" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="307,-60" name="TextContent" size="300,30" controller="PlayerStatsWindow" text="{playercoretemp}" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="360,-15" name="elevIcon" size="20,20" sprite="ui_game_symbol_climb" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="420,-25" size="300,30" name="elevLabel" controller="MapStats" text="{mapelevation} M[-]" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		
+		<sprite depth="4" pos="22,-15" name="windIcon" size="20,20" sprite="ui_game_symbol_wind" color="255,255,255,255" globalopacitymod="1.8"/>
+		<label depth="4" pos="-18,-25" name="windLabel" size="300,30" controller="MapStats" text="{mapwind} MPH[-]" font_size="28" color="[white]" pivot="center" effect="outline" justify="center" upper_case="true"/>
+		<!--End Modded-->
 	</window>
 
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
@@ -2599,7 +2612,7 @@
 				<togglebutton name="toggleDecorations" caption_key="xuiDebugMenuDecorations" width="290" height="32" depth="3" />
 				<togglebutton name="toggleEntityTasks" caption_key="xuiDebugMenuEntityTasks" width="290" height="32" depth="3" />
 				<togglebutton name="toggleLightPerformance" caption_key="xuiDebugMenuShowLightPerf" width="290" height="32" depth="3" />
-				<togglebutton name="toggleStabilityGlue" caption_key="xuiDebugMenuShowStabilityGlue" width="290" height="32" depth="3" />
+        <togglebutton name="toggleStabilityGlue" caption_key="xuiDebugMenuShowStabilityGlue" width="290" height="32" depth="3" />
 			</grid>
 
 		</panel>
