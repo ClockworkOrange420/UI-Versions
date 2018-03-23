@@ -2,8 +2,8 @@
 	<!--Modded-->
 	<window name="HUDLeftStatBars">
 
-			<panel name="MobiGlassV1" backgroundcolor="[black]" controller="HUDStatBar">
-				<texture depth="1" pos="300,110" name="MobiGlassV1" size="320,320" texture="@file:Mods\ACPIcons\UI\MobiGlassV1.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
+			<panel name="MobiGlassV2" backgroundcolor="[black]" controller="HUDStatBar">
+				<texture depth="1" pos="300,105" name="MobiGlassV2" size="320,270" texture="@file:Mods\ACPIcons\UI\MobiGlassV2.png" material="Materials/Transparent Colored" justify="center" pivot="center"/>
 				
 				<sprite depth="3" pos="198,113" size="178,123" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" name="BarContent" atlas="ItemIconAtlas" sprite="HealthBar" justify="center" pivot="center" type="filled" fill="0" foregroundlayer="true" filldirection="Vertical"/>
 				<sprite depth="1" pos="198,39" name="Health" size="32,22" atlas="ItemIconAtlas" sprite="ui_game_symbol_health_full2" justify="center" pivot="center" foregroundlayer="true"/>
